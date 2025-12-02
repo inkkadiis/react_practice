@@ -1,0 +1,68 @@
+* {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.root {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
+  padding: 1%;
+}
+
+.box {
+  border: 1px solid rgb(148, 148, 148);
+  border-radius: 13px;
+  width: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px 0px 10px;
+}
+
+.item-img {
+  width: 70%;
+  border: 1px solid rgba(255, 255, 255, 0);
+  border-radius: 5%;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: center;
+
+  gap: 8px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px 8px 15px;
+  background-color: white;
+  border: 1px solid rgba(148, 148, 148);
+  border-radius: 6px;
+}
+
+.Win {
+  border: 5px solid;
+  border-color: green;
+}
+
+.Lose {
+  border: 5px solid;
+  border-color: Red;
+}
+
+.Draw {
+  border: 1px solid rgb(0, 0, 0);
+}
