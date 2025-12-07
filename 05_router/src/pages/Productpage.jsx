@@ -1,10 +1,10 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 
-const Productpage = () => {
+const ProductPage = () => {
   let [query, setQurey] = useSearchParams();
 
-  console.log("dd", query.get("q"));
+  console.log("dd", query.get("page"));
   return (
     <div>
       <h1>Show All Products</h1>
@@ -12,4 +12,4 @@ const Productpage = () => {
   );
 };
 
-export default Productpage;
+export default ProductPage;

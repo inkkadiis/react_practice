@@ -1,10 +1,10 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const Aboutpage = () => {
-  const navi = useNavigate();
+const AboutPage = () => {
+  const navigate = useNavigate();
   const goToHome = () => {
-    navi("/");
+    navigate("/");
   };
 
   return (
@@ -15,4 +15,4 @@ const Aboutpage = () => {
   );
 };
 
-export default Aboutpage;
+export default AboutPage;

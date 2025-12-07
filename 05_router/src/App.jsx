@@ -1,19 +1,28 @@
 import { useState } from "react";
-import Homepage from "./pages/Homepage";
-import Aboutpage from "./pages/Aboutpage";
-import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+import { Routes, Route, Navigate } from "react-router-dom";
 import "./App.css";
-import Productpage from "./pages/Productpage";
-import Productdetail from "./pages/Productdetail";
+import ProductPage from "./pages/ProductPage";
+import ProductDetail from "./pages/ProductDetail";
+import LogInPage from "./pages/LoginPage";
+import UserPage from "./pages/UserPage";
 
 function App() {
+  const [authenticate, setAuthenticate] = useState(false);
+  const PrivateRoute = () => {
+    return authenticate == true ? <UserPage /> : <Navigate to="/login" />;
+  };
+
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/about" element={<Aboutpage />} />
-        <Route path="/products" element={<Productpage />} />
-        <Route path="/products/:id/:num" element={<Productdetail />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/products" element={<ProductPage />} />
+        <Route path="/products/:id/:num" element={<ProductDetail />} />
+        <Route path="/login" element={<LogInPage />} />
+        <Route path="/user" element={<PrivateRoute />} />
       </Routes>
     </div>
   );

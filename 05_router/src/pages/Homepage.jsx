@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-const Homepage = () => {
-  const navi = useNavigate();
+const HomePage = () => {
+  const navigate = useNavigate();
   const goProductAll = () => {
-    navi("/products?q=pants");
+    navigate("/products?q=pants");
   };
 
   return (
@@ -17,4 +17,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;
